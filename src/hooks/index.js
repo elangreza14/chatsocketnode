@@ -1,3 +1,1 @@
-import useLocalStrorage from "./useLocalStrorage";
-
-export { useLocalStrorage };
+export * from "./useLocalStrorage";

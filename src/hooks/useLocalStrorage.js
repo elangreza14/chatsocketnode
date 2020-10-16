@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const prefix = "chat-socket-";
 
-export default function useLocalStrorage(key, initialValue) {
+export const useLocalStrorage = (key, initialValue) => {
   const prefixedKey = prefix + key;
   const [value, setValue] = useState(() => {
     if (process.browser) {
@@ -23,4 +23,4 @@ export default function useLocalStrorage(key, initialValue) {
   }, [prefixedKey, value]);
 
   return [value, setValue];
-}
+};

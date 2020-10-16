@@ -1,12 +1,12 @@
-import { Login } from "../compenents/organisms";
+import { DashBoard, Login } from "../compenents/organisms";
 import { useLocalStrorage } from "../hooks";
 
 export default function Home() {
+  useLocalStrorage;
   const [id, setId] = useLocalStrorage("id");
   return (
-    <>
-      {id}
-      <Login onIdSubmit={setId} />
-    </>
+    <div>
+      {id ? <DashBoard id={id} /> : <Login onIdSubmit={setId} />}
+    </div>
   );
 }

@@ -2,13 +2,14 @@ import { useRef } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { v4 as uuidV4 } from "uuid";
 
-export default function Login({ onIdSubmit }) {
+const Login = ({ onIdSubmit }) => {
   const idRef = useRef();
+  const nameRef = useRef();
 
   function handleSubmit(e) {
     e.preventDefault();
     console.log("test");
-    onIdSubmit(idRef.current.value);
+    onIdSubmit({ id: idRef.current.value, name: nameRef.current.value });
   }
   function createNewID() {
     onIdSubmit(uuidV4());
@@ -19,6 +20,10 @@ export default function Login({ onIdSubmit }) {
       style={{ height: "100vh" }}
     >
       <Form onSubmit={handleSubmit} className="w-100">
+        <Form.Group>
+          <Form.Label>Enter Your Name</Form.Label>
+          <Form.Control type="text" ref={nameRef}></Form.Control>
+        </Form.Group>
         <Form.Group>
           <Form.Label>Enter Your ID</Form.Label>
           <Form.Control type="text" ref={idRef}></Form.Control>
@@ -32,4 +37,6 @@ export default function Login({ onIdSubmit }) {
       </Form>
     </Container>
   );
-}
+};
+
+export default Login;
