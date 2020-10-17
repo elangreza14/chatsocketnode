@@ -1,4 +1,4 @@
-import Login from "./Login";
+import LoginComponent from "./LoginComponent";
 import DashBoard from "./DashBoard";
 import Sidebar from "./Sidebar";
 import Conversation from "./Conversation";
@@ -7,7 +7,7 @@ import NewContactModal from "./NewContactModal";
 import NewConversationModal from "./NewConversationModal";
 
 export {
-  Login,
+  LoginComponent,
   Sidebar,
   DashBoard,
   Conversation,

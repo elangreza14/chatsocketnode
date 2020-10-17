@@ -42,8 +42,7 @@ const Sidebar = (props) => {
         </Tab.Content>
         <div className="p-2 border-top border-right small">
           <h6>
-            Your ID:{" "}
-            <span className="text-muted">{id ? toString(id.name) : null}</span>
+            Your ID: <span className="text-muted">{id ? id.name : null}</span>
           </h6>
         </div>
         <Button className="rounded-0" onClick={() => setOpenModal(true)}>

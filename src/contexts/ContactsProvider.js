@@ -3,7 +3,7 @@ import { ContactsContext } from ".";
 import { useLocalStrorage } from "../hooks";
 import { ContactReducer } from "../reducers";
 
-const ContactsProvider = ({ children }) => {
+export const ContactsProvider = ({ children }) => {
   const [contactList, dispatchConctact] = useReducer(ContactReducer, []);
 
   // const [contacs, setContacs] = useLocalStrorage("contacs", contactList);
@@ -18,5 +18,3 @@ const ContactsProvider = ({ children }) => {
     </ContactsContext.Provider>
   );
 };
-
-export default ContactsProvider;

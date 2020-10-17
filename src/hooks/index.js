@@ -1,1 +1,2 @@
-export * from "./useLocalStrorage";
+export * from "./useLocalStorage";
+export * from "./useAuthRedirect";
